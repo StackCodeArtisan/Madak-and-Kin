@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0B1F3A;
+  --color-navy-light: #16365F;
+  --color-navy-dark: #061121;
+  --color-gold: #D4AF37;
+  --color-gold-hover: #BCA02E;
+  --color-gold-light: #F4EBD0;
+  --color-maple: #D52B1E;
+  --color-forest: #2E6B3F;
+  --color-forest-light: #3D8C54;
+
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+  --font-spartan: 'League Spartan', sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: var(--font-poppins);
+  }
+}
+
+/* Glassmorphism Utilities */
+.glass-nav {
+  background: rgba(11, 31, 58, 0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(11, 31, 58, 0.05);
+}
+
+.glass-card-dark {
+  background: rgba(11, 31, 58, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B1F3A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #BCA02E;
+}
