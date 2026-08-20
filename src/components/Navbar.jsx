@@ -93,11 +93,11 @@ const Navbar = () => {
             {/* Desktop CTA Buttons */}
             <div className="hidden xl:flex items-center space-x-4">
               <a
-                href="tel:5064554605"
+                href="tel:5064783683"
                 className="flex items-center space-x-2 font-poppins text-xs sm:text-sm font-semibold text-white hover:text-gold transition-colors duration-200"
               >
                 <FaPhoneAlt className="text-gold text-xs" />
-                <span>506-455-4605</span>
+                <span>506 478 3683</span>
               </a>
               <a
                 href="#quote"
@@ -111,7 +111,7 @@ const Navbar = () => {
             {/* Mobile / Tablet Menu Button */}
             <div className="flex xl:hidden items-center space-x-3">
               <a
-                href="tel:5064554605"
+                href="tel:5064783683"
                 className="flex items-center space-x-1.5 font-poppins text-xs font-semibold bg-white/10 text-white px-3 py-1.5 rounded-full border border-white/20"
               >
                 <FaPhoneAlt className="text-gold text-xs" />
@@ -151,11 +151,11 @@ const Navbar = () => {
                 ))}
                 <div className="border-t border-white/10 pt-4 mt-4 flex flex-col space-y-3 px-3">
                   <a
-                    href="tel:5064554605"
+                    href="tel:5064783683"
                     className="flex items-center space-x-3 font-poppins text-sm font-semibold text-white hover:text-gold"
                   >
                     <FaPhoneAlt className="text-gold" />
-                    <span>Call: 506-455-4605</span>
+                    <span>Call: 506 478 3683</span>
                   </a>
                   <a
                     href="#quote"

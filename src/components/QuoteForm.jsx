@@ -232,11 +232,11 @@ const QuoteForm = () => {
                     <p>{errorMessage}</p>
                     <div className="flex flex-wrap gap-3 pt-1">
                       <a
-                        href="tel:5064554605"
+                        href="tel:5064783683"
                         className="inline-flex items-center space-x-2 bg-navy text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-gold hover:text-navy transition-colors"
                       >
                         <FaPhoneAlt />
-                        <span>Call 506-455-4605</span>
+                        <span>Call 506 478 3683</span>
                       </a>
                       <a
                         href="https://wa.me/15064783683"
@@ -284,7 +284,7 @@ const QuoteForm = () => {
                       disabled={isSubmitting}
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="e.g. (506) 455-4605"
+                      placeholder="e.g. (506) 478-3683"
                       className={`w-full px-4 py-3 rounded-xl border font-poppins text-sm bg-slate-50 focus:outline-none focus:ring-2 focus:bg-white transition-all disabled:opacity-50 ${
                         errors.phone ? 'border-maple focus:ring-maple/20' : 'border-slate-200 focus:ring-gold/20 focus:border-gold'
                       }`}
@@ -481,7 +481,7 @@ const QuoteForm = () => {
                     Submit Another Request
                   </button>
                   <a
-                    href="tel:5064554605"
+                    href="tel:5064783683"
                     className="bg-gold hover:bg-gold-hover text-navy font-poppins font-bold text-sm px-6 py-3 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2"
                   >
                     <FaPhoneAlt />

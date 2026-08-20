@@ -144,7 +144,7 @@ const Footer = () => {
               <ul className="space-y-3 font-poppins text-xs sm:text-sm text-white/60">
                 <li className="flex items-center space-x-3">
                   <FaPhoneAlt className="text-gold shrink-0" />
-                  <a href="tel:5064554605" className="hover:text-gold">506 455 4605</a>
+                  <a href="tel:5064783683" className="hover:text-gold">506 478 3683</a>
                 </li>
                 <li className="flex items-center space-x-3">
                   <FaEnvelope className="text-gold shrink-0" />

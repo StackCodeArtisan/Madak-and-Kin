@@ -123,11 +123,11 @@ const Hero = () => {
               Get Free Quote
             </a>
             <a
-              href="tel:5064554605"
+              href="tel:5064783683"
               className="font-poppins text-center flex items-center justify-center space-x-2 font-bold bg-white/10 hover:bg-white/20 text-white border border-white/30 px-8 py-4 rounded-full transition-all duration-300 backdrop-blur-sm hover:scale-[1.03] text-base"
             >
               <FaPhoneAlt className="text-gold" />
-              <span>Call 506-455-4605</span>
+              <span>Call 506 478 3683</span>
             </a>
           </motion.div>
 

@@ -42,7 +42,7 @@ const FloatingActions = () => {
 
       {/* Call Button */}
       <motion.a
-        href="tel:5064554605"
+        href="tel:5064783683"
         whileHover={{ scale: 1.1, y: -2 }}
         whileTap={{ scale: 0.9 }}
         className="w-14 h-14 bg-gold hover:bg-gold-hover text-navy rounded-full flex items-center justify-center shadow-xl cursor-pointer transition-colors duration-300 border border-gold/20"

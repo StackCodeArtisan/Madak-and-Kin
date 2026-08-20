@@ -306,7 +306,7 @@ const About = () => {
               </div>
 
               <div className="space-y-2 md:text-right">
-                <p>📞 Call: <a href="tel:5064554605" className="text-gold font-bold hover:underline">506-455-4605</a></p>
+                <p>📞 Call: <a href="tel:5064783683" className="text-gold font-bold hover:underline">506 478 3683</a></p>
                 <p>💬 WhatsApp: <a href="https://wa.me/15064783683" target="_blank" rel="noopener noreferrer" className="text-gold font-bold hover:underline">506-478-3683</a></p>
                 <p className="text-white/70 pt-2">📍 Serving Fredericton, Saint John, Moncton and other New Brunswick cities and communities by advance booking.</p>
                 <p className="text-gold font-bold uppercase tracking-wider text-xs pt-1">Professional. Reliable. Trusted.</p>

@@ -155,7 +155,7 @@ const SisterCompanySection = () => {
                 <FaStar />
               </a>
               <a
-                href="tel:5064554605"
+                href="tel:5064783683"
                 className="inline-flex items-center justify-center space-x-2 font-poppins font-bold bg-white hover:bg-slate-100 text-navy border border-slate-200 px-5 py-3.5 rounded-xl transition-all duration-300 text-xs"
               >
                 <FaPhoneAlt className="text-gold" />

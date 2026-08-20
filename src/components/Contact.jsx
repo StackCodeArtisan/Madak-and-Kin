@@ -7,8 +7,8 @@ const Contact = () => {
     {
       icon: FaPhoneAlt,
       title: 'Phone Dispatch',
-      value: '506 455 4605',
-      href: 'tel:5064554605',
+      value: '506 478 3683',
+      href: 'tel:5064783683',
       desc: 'Call our primary line for bookings & general inquiries.'
     },
     {
