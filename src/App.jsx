@@ -2,12 +2,12 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Stats from './components/Stats';
 import About from './components/About';
 import Services from './components/Services';
+import StorageSection from './components/StorageSection';
+import SisterCompanySection from './components/SisterCompanySection';
 import WhyChooseUs from './components/WhyChooseUs';
 import Process from './components/Process';
-import Testimonials from './components/Testimonials';
 import ServiceArea from './components/ServiceArea';
 import FAQ from './components/FAQ';
 import QuoteForm from './components/QuoteForm';
@@ -19,12 +19,12 @@ function LandingPage() {
   return (
     <>
       <Hero />
-      <Stats />
       <About />
       <Services />
+      <StorageSection />
+      <SisterCompanySection />
       <WhyChooseUs />
       <Process />
-      <Testimonials />
       <ServiceArea />
       <FAQ />
       <QuoteForm />

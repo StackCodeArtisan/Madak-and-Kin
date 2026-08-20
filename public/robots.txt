@@ -1,0 +1,5 @@
+# robots.txt for Medak & Kin Moving Inc.
+User-agent: *
+Allow: /
+
+Sitemap: https://medakmoving.ca/sitemap.xml

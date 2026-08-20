@@ -21,9 +21,10 @@ const Footer = () => {
     { name: 'Home', href: '#home' },
     { name: 'About Us', href: '#about' },
     { name: 'Our Services', href: '#services' },
+    { name: 'Storage Solutions', href: '#storage' },
+    { name: 'Medak Family & Sister Co.', href: '#cleaning' },
     { name: 'Why Choose Us', href: '#why-choose-us' },
     { name: 'Moving Process', href: '#process' },
-    { name: 'Testimonials', href: '#testimonials' },
     { name: 'FAQs', href: '#faq' },
     { name: 'Contact Us', href: '#contact' }
   ];
@@ -32,9 +33,9 @@ const Footer = () => {
     'Residential Moving',
     'Commercial Relocation',
     'Apartment & Condo Moves',
-    'Senior Moving Assistance',
-    'Furniture & Item Delivery',
-    'Packing & Supplies'
+    'Convenient Storage Solutions',
+    'Post-Move Clean-Up',
+    'Medak Prestige Cleaning Link'
   ];
 
   return (
@@ -59,7 +60,7 @@ const Footer = () => {
             </a>
             
             <p className="font-poppins text-white/60 text-xs sm:text-sm leading-relaxed mb-6 max-w-sm">
-              Part of the Medak family of businesses. We provide premium, honest, and reliable residential and commercial moving solutions in Fredericton, Saint John, and surrounding NB communities.
+              Part of the Medak family of businesses. We provide honest, reliable residential and commercial moving, post-move clean-up, and storage solutions in Fredericton, Saint John, and surrounding New Brunswick communities.
             </p>
 
             {/* Social Icons */}
@@ -99,13 +100,13 @@ const Footer = () => {
             <h3 className="font-montserrat font-bold text-sm text-white uppercase tracking-widest mb-6 pb-2 border-b border-white/5 w-fit pr-6">
               Quick Links
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-2.5">
               {quickLinks.map((link, idx) => (
                 <li key={idx}>
                   <a
                     href={link.href}
                     onClick={(e) => handleScrollTo(e, link.href)}
-                    className="font-poppins text-xs sm:text-sm text-white/60 hover:text-gold transition-colors duration-200"
+                    className="font-poppins text-xs text-white/60 hover:text-gold transition-colors duration-200"
                   >
                     {link.name}
                   </a>
@@ -117,15 +118,15 @@ const Footer = () => {
           {/* Services Column */}
           <div className="lg:col-span-3 text-left">
             <h3 className="font-montserrat font-bold text-sm text-white uppercase tracking-widest mb-6 pb-2 border-b border-white/5 w-fit pr-6">
-              Our Services
+              Our Offerings
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-2.5">
               {topServices.map((service, idx) => (
                 <li key={idx}>
                   <a
                     href="#services"
                     onClick={(e) => handleScrollTo(e, '#services')}
-                    className="font-poppins text-xs sm:text-sm text-white/60 hover:text-gold transition-colors duration-200"
+                    className="font-poppins text-xs text-white/60 hover:text-gold transition-colors duration-200"
                   >
                     {service}
                   </a>
@@ -151,7 +152,7 @@ const Footer = () => {
                 </li>
                 <li className="flex items-start space-x-3">
                   <FaMapMarkerAlt className="text-gold shrink-0 mt-0.5" />
-                  <span>1941 Lincoln Road, Fredericton, NB</span>
+                  <span>1941 Lincoln Road, Fredericton, NB E3B 8J6</span>
                 </li>
               </ul>
             </div>
@@ -176,7 +177,7 @@ const Footer = () => {
             <span>&copy; {new Date().getFullYear()} Medak & Kin Moving Inc. All rights reserved.</span>
           </div>
           <div className="flex space-x-4">
-            <span className="text-white/30">Proudly Canadian Owned & Operated</span>
+            <span className="text-white/30">Proudly Canadian & Family Owned</span>
           </div>
         </div>
 

@@ -9,61 +9,61 @@ import {
   FaCalendarAlt, 
   FaRegSmile, 
   FaCanadianMapleLeaf, 
-  FaTools, 
-  FaLock 
+  FaWarehouse, 
+  FaBroom 
 } from 'react-icons/fa';
 
 const WhyChooseUs = () => {
   const reasons = [
     {
-      icon: FaUsers,
-      title: 'Professional Team',
-      desc: 'Our movers are highly trained, background-checked, and committed to excellent service.'
+      icon: FaCanadianMapleLeaf,
+      title: 'Local Family Owned',
+      desc: 'Based in Fredericton, NB. You work directly with a local family that cares about your move.'
     },
     {
       icon: FaShieldAlt,
-      title: 'Fully Reliable',
-      desc: 'Count on us to show up on time and execute the move safely, with 100% accountability.'
+      title: '100% Reliable',
+      desc: 'Count on us to show up on time and execute the move safely, with personal accountability.'
+    },
+    {
+      icon: FaWarehouse,
+      title: 'Convenient Storage',
+      desc: 'Storage options managed right at our 1941 Lincoln Road location when timing between homes varies.'
+    },
+    {
+      icon: FaBroom,
+      title: 'Post-Move Clean-Up',
+      desc: 'Moving support that extends to tidying property mess, with sister-company deep cleaning access.'
     },
     {
       icon: FaHandHoldingUsd,
-      title: 'Affordable Pricing',
-      desc: 'Competitive, clear pricing with no hidden fees or surprise charges. Upfront transparency.'
+      title: 'Transparent Pricing',
+      desc: 'Honest, clear estimates with zero hidden fees or surprise charges upfront.'
     },
     {
       icon: FaHands,
       title: 'Careful Handling',
-      desc: 'We wrap, strap, and secure every single item, treating your goods with extreme respect.'
+      desc: 'We wrap, strap, and secure every item, treating your belongings with genuine respect.'
     },
     {
       icon: FaClock,
       title: 'Fast Response',
-      desc: 'Quick booking, efficient moving, and rapid customer support responses to any inquiries.'
+      desc: 'Quick quote turnarounds, efficient moving days, and direct dispatch communication.'
     },
     {
       icon: FaCalendarAlt,
       title: 'Flexible Scheduling',
-      desc: 'We move when it is convenient for you. We offer weekend, holiday, and off-hour bookings.'
+      desc: 'Moving around your schedule, including weekend and holiday availability across New Brunswick.'
     },
     {
       icon: FaRegSmile,
-      title: 'Friendly Support',
-      desc: 'Medak & Kin is known for friendly, helpful customer interactions at every stage.'
+      title: 'Friendly Care',
+      desc: 'Warm, personable interactions at every step during what can be a stressful life transition.'
     },
     {
-      icon: FaCanadianMapleLeaf,
-      title: 'Canadian Owned',
-      desc: 'Based proudly in Fredericton, NB, supporting our local New Brunswick economy.'
-    },
-    {
-      icon: FaTools,
-      title: 'Modern Equipment',
-      desc: 'Equipped with top-tier trucks, moving straps, protective blankets, and dollies.'
-    },
-    {
-      icon: FaLock,
-      title: 'Safe Transportation',
-      desc: 'Secure transport route planning and locked trucks keep your inventory safe from start to end.'
+      icon: FaUsers,
+      title: 'Experienced Crew',
+      desc: 'Dedicated local movers trained to navigate stairs, narrow doorways, and heavy inventory.'
     }
   ];
 
@@ -99,13 +99,13 @@ const WhyChooseUs = () => {
         <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
           <div className="flex items-center justify-center space-x-2 text-gold font-semibold text-xs sm:text-sm uppercase tracking-widest mb-3">
             <FaCanadianMapleLeaf className="text-maple text-sm" />
-            <span>Why Choose Us</span>
+            <span>The Medak Difference</span>
           </div>
           <h2 className="font-montserrat font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white mb-4">
             Why New Brunswick Trusts Medak & Kin
           </h2>
           <p className="font-poppins text-white/70 text-sm sm:text-base">
-            We hold ourselves to a higher standard. We believe moving shouldn't be stressful, and we verify that by focusing on safety, transparency, and friendliness.
+            You don't just hire a moving company. You work with a local family that cares about getting you safely through your relocation.
           </p>
         </div>
 

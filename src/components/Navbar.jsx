@@ -22,11 +22,12 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
+    { name: 'Medak Family', href: '#medak-family' },
     { name: 'Services', href: '#services' },
-    { name: 'Why Choose Us', href: '#why-choose-us' },
+    { name: 'Storage', href: '#storage' },
+    { name: 'Cleaning Ecosystem', href: '#cleaning' },
+    { name: 'Why Us', href: '#why-choose-us' },
     { name: 'Process', href: '#process' },
-    { name: 'Testimonials', href: '#testimonials' },
     { name: 'FAQ', href: '#faq' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -75,13 +76,13 @@ const Navbar = () => {
             </a>
 
             {/* Desktop Navigation Links */}
-            <div className="hidden lg:flex items-center space-x-6">
+            <div className="hidden xl:flex items-center space-x-5">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
                   onClick={(e) => handleScrollTo(e, link.href)}
-                  className="font-poppins text-sm font-medium text-white/80 hover:text-gold transition-colors duration-200 relative group py-2"
+                  className="font-poppins text-xs font-medium text-white/80 hover:text-gold transition-colors duration-200 relative group py-2"
                 >
                   {link.name}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
@@ -90,10 +91,10 @@ const Navbar = () => {
             </div>
 
             {/* Desktop CTA Buttons */}
-            <div className="hidden lg:flex items-center space-x-4">
+            <div className="hidden xl:flex items-center space-x-4">
               <a
                 href="tel:5064554605"
-                className="flex items-center space-x-2 font-poppins text-sm font-semibold text-white hover:text-gold transition-colors duration-200"
+                className="flex items-center space-x-2 font-poppins text-xs sm:text-sm font-semibold text-white hover:text-gold transition-colors duration-200"
               >
                 <FaPhoneAlt className="text-gold text-xs" />
                 <span>506-455-4605</span>
@@ -101,17 +102,24 @@ const Navbar = () => {
               <a
                 href="#quote"
                 onClick={(e) => handleScrollTo(e, '#quote')}
-                className="font-poppins text-sm font-semibold bg-gold hover:bg-gold-hover text-navy px-5 py-2.5 rounded-full transition-all duration-300 hover:scale-[1.02] shadow-[0_4px_14px_0_rgba(212,175,55,0.3)]"
+                className="font-poppins text-xs font-semibold bg-gold hover:bg-gold-hover text-navy px-4 py-2.5 rounded-full transition-all duration-300 hover:scale-[1.02] shadow-[0_4px_14px_0_rgba(212,175,55,0.3)] uppercase tracking-wider"
               >
-                Get Free Quote
+                Free Quote
               </a>
             </div>
 
-            {/* Mobile Menu Button */}
-            <div className="flex lg:hidden items-center">
+            {/* Mobile / Tablet Menu Button */}
+            <div className="flex xl:hidden items-center space-x-3">
+              <a
+                href="tel:5064554605"
+                className="flex items-center space-x-1.5 font-poppins text-xs font-semibold bg-white/10 text-white px-3 py-1.5 rounded-full border border-white/20"
+              >
+                <FaPhoneAlt className="text-gold text-xs" />
+                <span>Call</span>
+              </a>
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="text-white hover:text-gold focus:outline-none p-2"
+                className="text-white hover:text-gold focus:outline-none p-1.5"
                 aria-label="Toggle navigation menu"
               >
                 {isOpen ? <HiX size={28} /> : <HiMenu size={28} />}
@@ -128,23 +136,23 @@ const Navbar = () => {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden bg-navy-dark/98 border-b border-gold/10 backdrop-blur-lg overflow-hidden"
+              className="xl:hidden bg-navy-dark/98 border-b border-gold/10 backdrop-blur-lg overflow-hidden"
             >
-              <div className="px-4 pt-2 pb-6 space-y-2">
+              <div className="px-4 pt-2 pb-6 space-y-1 text-left">
                 {navLinks.map((link) => (
                   <a
                     key={link.name}
                     href={link.href}
                     onClick={(e) => handleScrollTo(e, link.href)}
-                    className="block font-poppins text-base font-medium text-white/90 hover:text-gold py-2.5 px-3 rounded-lg hover:bg-white/5 transition-all"
+                    className="block font-poppins text-sm font-medium text-white/90 hover:text-gold py-2 px-3 rounded-lg hover:bg-white/5 transition-all"
                   >
                     {link.name}
                   </a>
                 ))}
-                <div className="border-t border-white/10 pt-4 mt-4 flex flex-col space-y-4 px-3">
+                <div className="border-t border-white/10 pt-4 mt-4 flex flex-col space-y-3 px-3">
                   <a
                     href="tel:5064554605"
-                    className="flex items-center space-x-3 font-poppins text-base font-semibold text-white hover:text-gold"
+                    className="flex items-center space-x-3 font-poppins text-sm font-semibold text-white hover:text-gold"
                   >
                     <FaPhoneAlt className="text-gold" />
                     <span>Call: 506-455-4605</span>
@@ -152,7 +160,7 @@ const Navbar = () => {
                   <a
                     href="#quote"
                     onClick={(e) => handleScrollTo(e, '#quote')}
-                    className="w-full text-center font-poppins text-base font-semibold bg-gold hover:bg-gold-hover text-navy py-3 rounded-full transition-all duration-300"
+                    className="w-full text-center font-poppins text-sm font-semibold bg-gold hover:bg-gold-hover text-navy py-3 rounded-full transition-all duration-300 uppercase tracking-wider"
                   >
                     Get Free Quote
                   </a>
