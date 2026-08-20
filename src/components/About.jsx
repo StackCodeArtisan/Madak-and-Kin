@@ -1,9 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaCheckCircle, FaAward, FaCanadianMapleLeaf, FaHeart } from 'react-icons/fa';
-import teamImg from '../img/about_team.png';
-import truckImg from '../img/65160.png';
-import packingImg from '../img/65164.png';
+import familyImg from '../img/Family.png';
 
 const About = () => {
   const visionItems = [
@@ -21,7 +19,7 @@ const About = () => {
     <section id="medak-family" className="py-20 sm:py-28 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Main Grid: Story + Mosaic */}
+        {/* Main Grid: Story + Image */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-16">
           
           {/* Content Column */}
@@ -75,37 +73,14 @@ const About = () => {
             <div className="absolute -top-4 -left-4 w-72 h-72 bg-gold/10 rounded-3xl -z-10 blur-xl" />
             <div className="absolute -bottom-4 -right-4 w-72 h-72 bg-navy/5 rounded-3xl -z-10 blur-xl" />
             
-            {/* Image Grid Mosaic */}
-            <div className="grid grid-cols-2 gap-4 h-[400px] sm:h-[480px]">
-              {/* Left Column: Team Image */}
-              <div className="relative border-2 border-gold/20 rounded-2xl p-1 bg-white shadow-xl hover:border-gold transition-colors duration-300">
-                <img
-                  src={teamImg}
-                  alt="Medak & Kin Professional Moving Team"
-                  className="w-full h-full object-cover rounded-xl"
-                  loading="lazy"
-                />
-              </div>
-
-              {/* Right Column: Stack of Truck and Packing */}
-              <div className="flex flex-col gap-4">
-                <div className="h-2/5 relative border-2 border-gold/20 rounded-2xl p-1 bg-white shadow-xl hover:border-gold transition-colors duration-300">
-                  <img
-                    src={truckImg}
-                    alt="Medak & Kin Moving Truck"
-                    className="w-full h-full object-cover rounded-xl"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="h-3/5 relative border-2 border-gold/20 rounded-2xl p-1 bg-white shadow-xl hover:border-gold transition-colors duration-300">
-                  <img
-                    src={packingImg}
-                    alt="Medak & Kin Packing Services"
-                    className="w-full h-full object-cover rounded-xl"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
+            {/* Single Family Image Card */}
+            <div className="relative border-2 border-gold/20 rounded-3xl p-2 bg-white shadow-2xl hover:border-gold transition-colors duration-300 max-h-[540px] overflow-hidden">
+              <img
+                src={familyImg}
+                alt="Christina Savoie & Tosin Medaiyese - Medak & Kin Family"
+                className="w-full h-full object-cover rounded-2xl"
+                loading="lazy"
+              />
             </div>
 
             {/* Floating Badge */}
