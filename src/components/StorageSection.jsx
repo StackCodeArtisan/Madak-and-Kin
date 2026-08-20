@@ -11,6 +11,8 @@ import {
   FaArrowRight
 } from 'react-icons/fa';
 
+import storageImg from '../img/storage.png';
+
 const StorageSection = () => {
   const storageScenarios = [
     {
@@ -80,7 +82,7 @@ const StorageSection = () => {
           </p>
         </div>
 
-        {/* Location Advantage Feature Card */}
+        {/* Location Advantage Feature Card with Image */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -90,7 +92,7 @@ const StorageSection = () => {
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
-            <div className="lg:col-span-8 text-left space-y-4">
+            <div className="lg:col-span-7 text-left space-y-4">
               <div className="inline-flex items-center space-x-2 bg-gold/15 text-gold px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
                 <FaMapMarkerAlt />
                 <span>One Move. One Convenient Location.</span>
@@ -140,9 +142,15 @@ const StorageSection = () => {
               </p>
             </div>
 
-            <div className="lg:col-span-4 flex flex-col items-center lg:items-end justify-center">
-              <div className="bg-gold text-navy p-6 rounded-2xl mb-4 shadow-xl">
-                <FaWarehouse size={48} />
+            {/* Storage Photo & Action CTA */}
+            <div className="lg:col-span-5 flex flex-col items-center justify-center space-y-5">
+              <div className="relative border-2 border-gold/30 rounded-2xl p-1.5 bg-white/10 shadow-2xl backdrop-blur-md overflow-hidden hover:border-gold transition-colors duration-300 w-full max-h-[300px]">
+                <img
+                  src={storageImg}
+                  alt="Sam's Storage & Medak Moving Location"
+                  className="w-full h-full object-cover rounded-xl"
+                  loading="lazy"
+                />
               </div>
               <a
                 href="#quote"
