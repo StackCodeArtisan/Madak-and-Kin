@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaPhoneAlt, FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaClock, FaCanadianMapleLeaf } from 'react-icons/fa';
+import { FaPhoneAlt, FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaClock, FaCanadianMapleLeaf, FaBriefcase, FaCreditCard, FaInfoCircle, FaCalendarCheck } from 'react-icons/fa';
 
 const Contact = () => {
   const contactDetails = [
@@ -9,7 +9,7 @@ const Contact = () => {
       title: 'Phone Dispatch',
       value: '506-455-4605',
       href: 'tel:+15064554605',
-      desc: 'Call our main office line for bookings & inquiries.'
+      desc: 'Call our main office line for bookings & general inquiries.'
     },
     {
       icon: FaWhatsapp,
@@ -19,18 +19,38 @@ const Contact = () => {
       desc: 'Send pictures of your items for quick visual estimates.'
     },
     {
-      icon: FaEnvelope,
-      title: 'Email Support',
-      value: 'medakmovingco@gmail.com',
-      href: 'mailto:medakmovingco@gmail.com',
-      desc: 'Send us lists of items, corporate RFPs, or inquiries.'
-    },
-    {
       icon: FaMapMarkerAlt,
       title: 'Office Location',
       value: '1941 Lincoln Road, Fredericton, NB',
       href: 'https://maps.google.com/?q=1941+Lincoln+Road+Fredericton+NB',
-      desc: 'Medak & Kin Headquarters'
+      desc: 'Medak & Kin Primary Headquarters'
+    }
+  ];
+
+  const departmentalEmails = [
+    {
+      icon: FaCalendarCheck,
+      title: 'Bookings & Quotes',
+      email: 'bookings@movewithmedak.ca',
+      desc: 'Moving quotes, scheduling & reservation updates.'
+    },
+    {
+      icon: FaInfoCircle,
+      title: 'General Information',
+      email: 'info@movewithmedak.ca',
+      desc: 'General customer support & general inquiries.'
+    },
+    {
+      icon: FaCreditCard,
+      title: 'Billing & Invoicing',
+      email: 'billing@movewithmedak.ca',
+      desc: 'Invoicing, receipts, payment support & accounts.'
+    },
+    {
+      icon: FaBriefcase,
+      title: 'Careers & Hiring',
+      email: 'careers@movewithmedak.ca',
+      desc: 'Job applications, employment & driver inquiries.'
     }
   ];
 
@@ -47,13 +67,13 @@ const Contact = () => {
           <h2 className="font-montserrat font-extrabold text-3xl sm:text-4xl lg:text-5xl text-navy mb-4">
             Contact Our Team
           </h2>
-          <p className="font-poppins text-slate-600 text-sm sm:text-base">
-            Reach out via phone, email, or WhatsApp, or visit our central office on Lincoln Road. We are ready to help with your move.
+          <p className="font-poppins text-slate-600 text-sm sm:text-base leading-relaxed">
+            Reach out via phone, WhatsApp, specialized departmental emails, or visit our office on Lincoln Road. We are ready to help with your move.
           </p>
         </div>
 
         {/* Contact Split Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-16">
           
           {/* Details Column */}
           <div className="lg:col-span-5 grid grid-cols-1 gap-4">
@@ -136,6 +156,45 @@ const Contact = () => {
             />
           </motion.div>
 
+        </div>
+
+        {/* Departmental Emails Directory */}
+        <div className="bg-slate-50 border border-slate-200/80 rounded-3xl p-8 sm:p-12 text-left">
+          <div className="flex items-center space-x-2 text-gold font-bold text-xs uppercase tracking-widest mb-2">
+            <FaEnvelope className="text-sm" />
+            <span>Email Directory</span>
+          </div>
+          <h3 className="font-montserrat font-extrabold text-2xl sm:text-3xl text-navy mb-6">
+            Departmental Email Contacts
+          </h3>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {departmentalEmails.map((item, idx) => {
+              const Icon = item.icon;
+              return (
+                <a
+                  key={idx}
+                  href={`mailto:${item.email}`}
+                  className="bg-white border border-slate-200/80 rounded-2xl p-6 hover:border-gold hover:shadow-lg transition-all duration-300 flex flex-col justify-between group cursor-pointer"
+                >
+                  <div>
+                    <div className="w-10 h-10 rounded-xl bg-navy/5 text-navy group-hover:bg-gold group-hover:text-navy transition-colors flex items-center justify-center text-lg mb-4">
+                      <Icon />
+                    </div>
+                    <h4 className="font-montserrat font-bold text-sm text-navy mb-1">
+                      {item.title}
+                    </h4>
+                    <p className="font-poppins text-xs text-gold font-bold break-all mb-2 group-hover:underline">
+                      {item.email}
+                    </p>
+                    <p className="font-poppins text-[11px] text-slate-500 leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                </a>
+              );
+            })}
+          </div>
         </div>
 
       </div>

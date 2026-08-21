@@ -423,7 +423,7 @@ const QuoteForm = () => {
                 {/* Privacy & Spam Protection Note */}
                 <div className="flex items-center space-x-2 text-xs text-slate-400 font-poppins pt-2">
                   <FaShieldAlt className="text-forest shrink-0" />
-                  <span>Your details are delivered securely to medakmovingco@gmail.com and are never shared.</span>
+                  <span>Your details are delivered securely to bookings@movewithmedak.ca and are never shared.</span>
                 </div>
 
                 {/* Submit Button */}

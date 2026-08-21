@@ -135,9 +135,12 @@ const Footer = () => {
                     <a href="https://wa.me/15064783683" target="_blank" rel="noopener noreferrer" className="hover:text-gold font-semibold text-white">506-478-3683</a>
                   </div>
                 </li>
-                <li className="flex items-center space-x-3">
-                  <FaEnvelope className="text-gold shrink-0" />
-                  <a href="mailto:medakmovingco@gmail.com" className="hover:text-gold break-all">medakmovingco@gmail.com</a>
+                <li className="flex items-start space-x-3">
+                  <FaEnvelope className="text-gold shrink-0 mt-1" />
+                  <div className="flex flex-col space-y-0.5 text-xs">
+                    <a href="mailto:bookings@movewithmedak.ca" className="hover:text-gold text-white font-semibold">bookings@movewithmedak.ca</a>
+                    <a href="mailto:info@movewithmedak.ca" className="hover:text-gold text-white/70">info@movewithmedak.ca</a>
+                  </div>
                 </li>
                 <li className="flex items-start space-x-3">
                   <FaMapMarkerAlt className="text-gold shrink-0 mt-0.5" />
