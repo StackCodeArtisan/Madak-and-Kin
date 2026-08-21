@@ -1,96 +1,80 @@
 import React from 'react';
-import { FaFacebookF, FaInstagram, FaTiktok, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaCanadianMapleLeaf } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import { FaFacebookF, FaInstagram, FaTiktok, FaPhoneAlt, FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaCanadianMapleLeaf } from 'react-icons/fa';
 import logoImg from '../img/logo.png';
 
 const Footer = () => {
-  const handleScrollTo = (e, href) => {
-    e.preventDefault();
-    const targetElement = document.querySelector(href);
-    if (targetElement) {
-      const offset = 80;
-      const elementPosition = targetElement.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
-  };
-
-  const quickLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About Us', href: '#about' },
-    { name: 'Our Services', href: '#services' },
-    { name: 'Storage Solutions', href: '#storage' },
-    { name: 'Medak Family & Sister Co.', href: '#cleaning' },
-    { name: 'Why Choose Us', href: '#why-choose-us' },
-    { name: 'Moving Process', href: '#process' },
-    { name: 'FAQs', href: '#faq' },
-    { name: 'Contact Us', href: '#contact' }
+  const pageLinks = [
+    { name: 'Home', path: '/' },
+    { name: 'Services', path: '/services' },
+    { name: 'Move + Clean', path: '/move-clean' },
+    { name: 'About Us', path: '/about' },
+    { name: 'Service Areas', path: '/service-areas' },
+    { name: 'Reviews', path: '/reviews' },
+    { name: 'Contact & Quote', path: '/contact' }
   ];
 
   const topServices = [
     'Residential Moving',
-    'Commercial Relocation',
-    'Apartment & Condo Moves',
-    'Convenient Storage Solutions',
-    'Post-Move Clean-Up',
-    'Medak Prestige Cleaning Link'
+    'Commercial & Office Moves',
+    'Apartment & Condo Relocations',
+    'Storage Assistance',
+    'Move + Clean Combined Services'
   ];
 
   return (
     <footer className="bg-navy-dark text-white/80 border-t border-gold/15 pt-16 pb-8 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Foot Grid */}
+        {/* Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 mb-12">
           
           {/* Logo & Bio Column */}
-          <div className="lg:col-span-4 text-left">
-            <a href="#home" onClick={(e) => handleScrollTo(e, '#home')} className="flex items-center space-x-3 mb-6 group w-fit">
-              <img src={logoImg} alt="Medak & Kin Moving Inc. Logo" className="h-12 w-auto" />
+          <div className="lg:col-span-4 text-left space-y-5">
+            <Link to="/" className="flex items-center space-x-3 group w-fit">
+              <img src={logoImg} alt="Medak & Kin Moving Inc. Logo" className="h-12 w-auto object-contain" />
               <div className="flex flex-col">
-                <span className="font-spartan font-bold text-white text-lg leading-tight uppercase group-hover:text-gold transition-colors duration-300">
+                <span className="font-spartan font-bold text-white text-lg leading-tight uppercase group-hover:text-gold transition-colors">
                   Medak & Kin
                 </span>
                 <span className="font-poppins text-gold text-[10px] uppercase tracking-[0.2em] font-semibold">
                   Moving Inc.
                 </span>
               </div>
-            </a>
+            </Link>
             
-            <p className="font-poppins text-white/60 text-xs sm:text-sm leading-relaxed mb-6 max-w-sm">
-              Part of the Medak family of businesses. We provide honest, reliable residential and commercial moving, post-move clean-up, and storage solutions in Fredericton, Saint John, and surrounding New Brunswick communities.
+            <p className="font-poppins text-white/60 text-xs sm:text-sm leading-relaxed max-w-sm">
+              Dependable, local, family-owned residential and commercial moving, storage coordination, and post-move cleaning across Fredericton, Saint John, Moncton, and New Brunswick.
             </p>
 
             {/* Social Icons */}
-            <div className="flex space-x-4">
+            <div className="flex space-x-3 pt-1">
               <a
                 href="https://www.facebook.com/share/p/195uNyFBq6/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 hover:border-gold hover:bg-gold hover:text-navy flex items-center justify-center transition-all duration-300"
+                className="w-9 h-9 rounded-full bg-white/5 border border-white/10 hover:border-gold hover:bg-gold hover:text-navy flex items-center justify-center transition-all"
                 aria-label="Follow Medak & Kin Moving Inc. on Facebook"
               >
-                <FaFacebookF className="text-sm" />
+                <FaFacebookF className="text-xs" />
               </a>
               <a
                 href="https://www.instagram.com/medak.moving.inc?utm_source=qr&igsh=MWQzc204dGdxbDRjbg=="
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 hover:border-gold hover:bg-gold hover:text-navy flex items-center justify-center transition-all duration-300"
+                className="w-9 h-9 rounded-full bg-white/5 border border-white/10 hover:border-gold hover:bg-gold hover:text-navy flex items-center justify-center transition-all"
                 aria-label="Follow Medak & Kin Moving Inc. on Instagram"
               >
-                <FaInstagram className="text-sm" />
+                <FaInstagram className="text-xs" />
               </a>
               <a
                 href="https://vt.tiktok.com/ZSXurqcLw/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/5 border border-white/10 hover:border-gold hover:bg-gold hover:text-navy flex items-center justify-center transition-all duration-300"
+                className="w-9 h-9 rounded-full bg-white/5 border border-white/10 hover:border-gold hover:bg-gold hover:text-navy flex items-center justify-center transition-all"
                 aria-label="Follow Medak & Kin Moving Inc. on TikTok"
               >
-                <FaTiktok className="text-sm" />
+                <FaTiktok className="text-xs" />
               </a>
             </div>
           </div>
@@ -98,18 +82,17 @@ const Footer = () => {
           {/* Quick Links Column */}
           <div className="lg:col-span-2 text-left">
             <h3 className="font-montserrat font-bold text-sm text-white uppercase tracking-widest mb-6 pb-2 border-b border-white/5 w-fit pr-6">
-              Quick Links
+              Navigation
             </h3>
             <ul className="space-y-2.5">
-              {quickLinks.map((link, idx) => (
+              {pageLinks.map((link, idx) => (
                 <li key={idx}>
-                  <a
-                    href={link.href}
-                    onClick={(e) => handleScrollTo(e, link.href)}
-                    className="font-poppins text-xs text-white/60 hover:text-gold transition-colors duration-200"
+                  <Link
+                    to={link.path}
+                    className="font-poppins text-xs sm:text-sm text-white/60 hover:text-gold transition-colors"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -118,33 +101,39 @@ const Footer = () => {
           {/* Services Column */}
           <div className="lg:col-span-3 text-left">
             <h3 className="font-montserrat font-bold text-sm text-white uppercase tracking-widest mb-6 pb-2 border-b border-white/5 w-fit pr-6">
-              Our Offerings
+              Core Offerings
             </h3>
-            <ul className="space-y-2.5">
+            <ul className="space-y-2.5 font-poppins text-xs sm:text-sm text-white/60">
               {topServices.map((service, idx) => (
                 <li key={idx}>
-                  <a
-                    href="#services"
-                    onClick={(e) => handleScrollTo(e, '#services')}
-                    className="font-poppins text-xs text-white/60 hover:text-gold transition-colors duration-200"
-                  >
+                  <Link to="/services" className="hover:text-gold transition-colors">
                     {service}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Contact & Hours Column */}
-          <div className="lg:col-span-3 text-left space-y-6">
+          <div className="lg:col-span-3 text-left space-y-5">
             <div>
               <h3 className="font-montserrat font-bold text-sm text-white uppercase tracking-widest mb-6 pb-2 border-b border-white/5 w-fit pr-6">
                 Get In Touch
               </h3>
-              <ul className="space-y-3 font-poppins text-xs sm:text-sm text-white/60">
+              <ul className="space-y-3 font-poppins text-xs sm:text-sm text-white/70">
                 <li className="flex items-center space-x-3">
                   <FaPhoneAlt className="text-gold shrink-0" />
-                  <a href="tel:5064783683" className="hover:text-gold">506 478 3683</a>
+                  <div>
+                    <span className="text-[10px] text-white/40 block uppercase font-bold">Office Dispatch</span>
+                    <a href="tel:+15064554605" className="hover:text-gold font-semibold text-white">506-455-4605</a>
+                  </div>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <FaWhatsapp className="text-emerald-400 shrink-0" />
+                  <div>
+                    <span className="text-[10px] text-white/40 block uppercase font-bold">WhatsApp / Text</span>
+                    <a href="https://wa.me/15064783683" target="_blank" rel="noopener noreferrer" className="hover:text-gold font-semibold text-white">506-478-3683</a>
+                  </div>
                 </li>
                 <li className="flex items-center space-x-3">
                   <FaEnvelope className="text-gold shrink-0" />
@@ -158,7 +147,7 @@ const Footer = () => {
             </div>
 
             <div>
-              <h4 className="font-montserrat font-bold text-xs text-white uppercase tracking-widest mb-3">
+              <h4 className="font-montserrat font-bold text-xs text-white uppercase tracking-widest mb-2">
                 Business Hours
               </h4>
               <p className="font-poppins text-xs text-white/50 leading-relaxed">
@@ -177,7 +166,7 @@ const Footer = () => {
             <span>&copy; {new Date().getFullYear()} Medak & Kin Moving Inc. All rights reserved.</span>
           </div>
           <div className="flex space-x-4">
-            <span className="text-white/30">Proudly Canadian & Family Owned</span>
+            <span className="text-white/40">Proudly Canadian Owned & Operated</span>
           </div>
         </div>
 

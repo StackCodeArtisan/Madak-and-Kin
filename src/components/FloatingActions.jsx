@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaWhatsapp, FaPhoneAlt, FaArrowUp } from 'react-icons/fa';
+import { FaWhatsapp, FaArrowUp } from 'react-icons/fa';
 
 const FloatingActions = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -25,31 +25,19 @@ const FloatingActions = () => {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-40 flex flex-col space-y-3">
-      {/* WhatsApp Button */}
+    <div className="fixed bottom-6 right-6 z-40 flex flex-col space-y-3 pointer-events-auto">
+      {/* WhatsApp / Text Button */}
       <motion.a
         href="https://wa.me/15064783683"
         target="_blank"
         rel="noopener noreferrer"
         whileHover={{ scale: 1.1, y: -2 }}
         whileTap={{ scale: 0.9 }}
-        className="w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center shadow-xl cursor-pointer transition-colors duration-300 border border-emerald-400/20"
-        title="Chat on WhatsApp"
-        aria-label="Chat with Medak & Kin Moving on WhatsApp"
+        className="w-13 h-13 sm:w-14 sm:h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center shadow-xl cursor-pointer transition-colors duration-300 border border-emerald-400/20"
+        title="WhatsApp / Text 506-478-3683"
+        aria-label="WhatsApp or Text Medak & Kin Moving at 506-478-3683"
       >
-        <FaWhatsapp size={28} />
-      </motion.a>
-
-      {/* Call Button */}
-      <motion.a
-        href="tel:5064783683"
-        whileHover={{ scale: 1.1, y: -2 }}
-        whileTap={{ scale: 0.9 }}
-        className="w-14 h-14 bg-gold hover:bg-gold-hover text-navy rounded-full flex items-center justify-center shadow-xl cursor-pointer transition-colors duration-300 border border-gold/20"
-        title="Call Now"
-        aria-label="Call Medak & Kin Moving dispatch"
-      >
-        <FaPhoneAlt size={22} className="animate-pulse" />
+        <FaWhatsapp size={26} />
       </motion.a>
 
       {/* Back to Top Button */}
@@ -62,11 +50,11 @@ const FloatingActions = () => {
             onClick={scrollToTop}
             whileHover={{ scale: 1.1, y: -2 }}
             whileTap={{ scale: 0.9 }}
-            className="w-14 h-14 bg-navy hover:bg-navy-light text-gold rounded-full flex items-center justify-center shadow-xl cursor-pointer border border-gold/20 transition-colors duration-300"
+            className="w-13 h-13 sm:w-14 sm:h-14 bg-navy hover:bg-navy-light text-gold rounded-full flex items-center justify-center shadow-xl cursor-pointer border border-gold/20 transition-colors duration-300"
             title="Back to Top"
             aria-label="Scroll back to top of the page"
           >
-            <FaArrowUp size={20} />
+            <FaArrowUp size={18} />
           </motion.button>
         )}
       </AnimatePresence>

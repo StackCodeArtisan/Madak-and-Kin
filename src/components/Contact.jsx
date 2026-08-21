@@ -1,20 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaPhoneAlt, FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaTruck, FaClock, FaCanadianMapleLeaf } from 'react-icons/fa';
+import { FaPhoneAlt, FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaClock, FaCanadianMapleLeaf } from 'react-icons/fa';
 
 const Contact = () => {
   const contactDetails = [
     {
       icon: FaPhoneAlt,
       title: 'Phone Dispatch',
-      value: '506 478 3683',
-      href: 'tel:5064783683',
-      desc: 'Call our primary line for bookings & general inquiries.'
+      value: '506-455-4605',
+      href: 'tel:+15064554605',
+      desc: 'Call our main office line for bookings & inquiries.'
     },
     {
       icon: FaWhatsapp,
-      title: 'WhatsApp Chat',
-      value: '506 478 3683',
+      title: 'WhatsApp / Text',
+      value: '506-478-3683',
       href: 'https://wa.me/15064783683',
       desc: 'Send pictures of your items for quick visual estimates.'
     },
@@ -48,7 +48,7 @@ const Contact = () => {
             Contact Our Team
           </h2>
           <p className="font-poppins text-slate-600 text-sm sm:text-base">
-            Reach out via phone, email, or WhatsApp, or visit our central office. We are always ready to discuss your move details.
+            Reach out via phone, email, or WhatsApp, or visit our central office on Lincoln Road. We are ready to help with your move.
           </p>
         </div>
 
@@ -108,7 +108,7 @@ const Contact = () => {
                   Monday – Sunday: 7:00 AM – 9:00 PM
                 </p>
                 <p className="font-poppins text-slate-400 text-xs">
-                  Yes, we answer calls and operate moves all weekends and holidays.
+                  Operating moves 7 days a week including weekends and holidays.
                 </p>
               </div>
             </motion.div>

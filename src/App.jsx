@@ -1,56 +1,45 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Services from './components/Services';
-import StorageSection from './components/StorageSection';
-import SisterCompanySection from './components/SisterCompanySection';
-import WhyChooseUs from './components/WhyChooseUs';
-import Process from './components/Process';
-import ServiceArea from './components/ServiceArea';
-import FAQ from './components/FAQ';
-import QuoteForm from './components/QuoteForm';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
 import FloatingActions from './components/FloatingActions';
+import ScrollToTop from './components/ScrollToTop';
 
-function LandingPage() {
-  return (
-    <>
-      <Hero />
-      <About />
-      <Services />
-      <StorageSection />
-      <SisterCompanySection />
-      <WhyChooseUs />
-      <Process />
-      <ServiceArea />
-      <FAQ />
-      <QuoteForm />
-      <Contact />
-    </>
-  );
-}
+import Home from './pages/Home';
+import ServicesPage from './pages/ServicesPage';
+import MoveCleanPage from './pages/MoveCleanPage';
+import AboutPage from './pages/AboutPage';
+import ServiceAreasPage from './pages/ServiceAreasPage';
+import ReviewsPage from './pages/ReviewsPage';
+import ContactPage from './pages/ContactPage';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="relative min-h-screen flex flex-col bg-white text-slate-800 selection:bg-gold selection:text-navy">
         {/* Navigation bar */}
         <Navbar />
         
-        {/* Main Content Area */}
+        {/* Main Page Routing Area */}
         <main className="flex-grow">
           <Routes>
-            <Route path="/" element={<LandingPage />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/move-clean" element={<MoveCleanPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/service-areas" element={<ServiceAreasPage />} />
+            <Route path="/reviews" element={<ReviewsPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/quote" element={<ContactPage />} />
+            <Route path="*" element={<Home />} />
           </Routes>
         </main>
         
         {/* Footer */}
         <Footer />
 
-        {/* Floating WhatsApp, Call, and Back-to-Top buttons */}
+        {/* Floating WhatsApp and Back-to-Top buttons */}
         <FloatingActions />
       </div>
     </Router>
