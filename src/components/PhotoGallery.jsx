@@ -1,13 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaCanadianMapleLeaf, FaCamera } from 'react-icons/fa';
+import truckImg from '../img/02_Authentic_Medak_Truck.png';
 import teamImg from '../img/about_team.png';
 import storageImg from '../img/storage.png';
-import packingImg from '../img/65164.png';
 import familyImg from '../img/Family.png';
 
 const PhotoGallery = () => {
   const photos = [
+    {
+      src: truckImg,
+      alt: 'Medak & Kin Authentic Moving Truck',
+      caption: 'Our Official Moving Fleet & Equipment'
+    },
     {
       src: teamImg,
       alt: 'Medak & Kin Professional Moving Team',
@@ -17,11 +22,6 @@ const PhotoGallery = () => {
       src: storageImg,
       alt: 'Sam\'s Storage & Medak Moving Location',
       caption: 'Lincoln Road Office & Storage Location'
-    },
-    {
-      src: packingImg,
-      alt: 'Medak Moving Equipment & Packing Care',
-      caption: 'Careful Packing & Item Protection'
     },
     {
       src: familyImg,
@@ -38,13 +38,13 @@ const PhotoGallery = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="flex items-center justify-center space-x-2 text-gold font-semibold text-xs sm:text-sm uppercase tracking-widest mb-3">
             <FaCanadianMapleLeaf className="text-maple text-sm" />
-            <span>Real Local Experience</span>
+            <span>Authentic Local Company</span>
           </div>
           <h2 className="font-montserrat font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white mb-4">
             Real Movers. Real Jobs. Real Care.
           </h2>
           <p className="font-poppins text-white/70 text-sm sm:text-base leading-relaxed">
-            See our team and equipment in action across Fredericton, Saint John, and New Brunswick communities.
+            See our actual team, authentic moving truck, and equipment in action across Fredericton, Saint John, and New Brunswick communities.
           </p>
         </div>
 

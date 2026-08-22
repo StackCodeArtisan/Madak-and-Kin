@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HiMenu, HiX } from 'react-icons/hi';
 import { FaPhoneAlt } from 'react-icons/fa';
-import logoImg from '../img/logo.png';
+import logoImg from '../img/01_OFFICIAL_Medak_Logo.png';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,25 +35,25 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? 'py-3 bg-navy/95 backdrop-blur-md border-b border-gold/20 shadow-lg'
-          : 'py-4 bg-navy/90 border-b border-white/10 backdrop-blur-sm'
+          ? 'py-2.5 bg-navy/95 backdrop-blur-md border-b border-gold/20 shadow-lg'
+          : 'py-3.5 bg-navy/90 border-b border-white/10 backdrop-blur-sm'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           
-          {/* Brand Logo & Title */}
-          <Link to="/" onClick={() => setIsOpen(false)} className="flex items-center space-x-3 group shrink-0">
+          {/* Brand Logo & Title - Enhanced Mobile Scale */}
+          <Link to="/" onClick={() => setIsOpen(false)} className="flex items-center space-x-2.5 group shrink-0">
             <img
               src={logoImg}
-              alt="Medak & Kin Moving Inc. Logo"
-              className="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              alt="Medak & Kin Moving Inc. Official Logo"
+              className="h-11 sm:h-13 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
             <div className="flex flex-col text-left">
               <span className="font-spartan font-bold text-white text-base sm:text-lg leading-tight tracking-wider uppercase group-hover:text-gold transition-colors">
                 Medak & Kin
               </span>
-              <span className="font-poppins text-gold text-[10px] uppercase tracking-[0.2em] font-semibold">
+              <span className="font-poppins text-gold text-[10px] uppercase tracking-[0.22em] font-semibold">
                 Moving Inc.
               </span>
             </div>
@@ -102,8 +102,8 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Mobile / Tablet Header Actions */}
-          <div className="flex lg:hidden items-center space-x-3">
+          {/* Mobile / Tablet Header Actions (Logo + Call + Hamburger) */}
+          <div className="flex lg:hidden items-center space-x-2.5">
             <a
               href="tel:+15064554605"
               className="flex items-center space-x-1.5 font-poppins text-xs font-semibold bg-white/10 text-white px-3 py-1.5 rounded-full border border-white/20 hover:bg-white/20 transition-colors"
@@ -116,7 +116,7 @@ const Navbar = () => {
               className="text-white hover:text-gold focus:outline-none p-1.5 rounded-lg hover:bg-white/5 transition-colors"
               aria-label="Toggle navigation menu"
             >
-              {isOpen ? <HiX size={26} /> : <HiMenu size={26} />}
+              {isOpen ? <HiX size={28} /> : <HiMenu size={28} />}
             </button>
           </div>
         </div>
@@ -150,7 +150,7 @@ const Navbar = () => {
                 </NavLink>
               ))}
 
-              <div className="border-t border-white/10 pt-4 mt-3 flex flex-col space-y-3 px-2">
+              <div className="border-t border-white/10 pt-4 mt-3 flex flex-col space-y-3 px-1">
                 <a
                   href="tel:+15064554605"
                   className="flex items-center space-x-3 font-poppins text-sm font-semibold text-white hover:text-gold py-1"

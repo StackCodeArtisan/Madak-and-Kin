@@ -5,10 +5,10 @@ import MoveCleanTeaser from '../components/MoveCleanTeaser';
 import ServicesSummary from '../components/ServicesSummary';
 import WhyChooseUs from '../components/WhyChooseUs';
 import AboutTeaser from '../components/AboutTeaser';
-import Testimonials from '../components/Testimonials';
+import TestimonialsPreview from '../components/TestimonialsPreview';
 import PhotoGallery from '../components/PhotoGallery';
-import ServiceArea from '../components/ServiceArea';
-import Contact from '../components/Contact';
+import ServiceAreaPreview from '../components/ServiceAreaPreview';
+import FinalQuoteCTA from '../components/FinalQuoteCTA';
 
 const Home = () => {
   return (
@@ -19,10 +19,10 @@ const Home = () => {
       <ServicesSummary />
       <WhyChooseUs />
       <AboutTeaser />
-      <Testimonials />
+      <TestimonialsPreview />
       <PhotoGallery />
-      <ServiceArea />
-      <Contact />
+      <ServiceAreaPreview />
+      <FinalQuoteCTA />
     </>
   );
 };
